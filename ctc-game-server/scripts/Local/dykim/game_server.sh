@@ -1,0 +1,1 @@
+C:\\Projects\\git\\PrototypingProjects\\GameServer\\bin\\Debug\\netcoreapp3.1\\GameServer.exe Local

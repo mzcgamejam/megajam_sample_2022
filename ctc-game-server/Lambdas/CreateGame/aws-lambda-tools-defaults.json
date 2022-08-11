@@ -1,0 +1,26 @@
+
+{
+    "Information" : [
+        "This file provides default values for the deployment wizard inside Visual Studio and the AWS Lambda commands added to the .NET Core CLI.",
+        "To learn more about the Lambda commands with the .NET Core CLI execute the following command at the command line in the project root directory.",
+        "dotnet lambda help",
+        "All the command line options for the Lambda command can be specified in this file."
+    ],
+    "profile"     : "default",
+    "region"      : "ap-northeast-2",
+    "configuration" : "Release",
+    "framework"     : "netcoreapp3.1",
+    "function-runtime" : "dotnetcore3.1",
+    "function-memory-size" : 256,
+    "function-timeout"     : 10,
+    "function-handler"     : "CreateGame::CreateGame.Function::FunctionHandler",
+    "function-name"        : "CreateGame",
+    "package-type"         : "Zip",
+    "function-role"        : "arn:aws:iam::831150897155:role/CustomLambdaRole",
+    "function-subnets"     : "subnet-0a075cbf2f082acd0,subnet-0dcb9411fa5531a1f",
+    "tracing-mode"         : "PassThrough",
+    "environment-variables" : "\"GAMELIFT_FLEET_ID\"=\"fleet-64f523d0-5cb9-4932-ba4c-697d06b80751\";\"GAME_DB_PORT\"=\"3306\";\"GAME_DB_USER\"=\"admin\";\"GAMELIFT_SERVICE_URL\"=\"\";\"GAME_DB_CHARSET\"=\"utf8\";\"GAME_DB_IP\"=\"database-1.cqoanobel0pg.ap-northeast-2.rds.amazonaws.com\";\"GAME_DB_DATABASE\"=\"accounts\";\"GAME_DB_PASSWORD\"=\"Admin1!!\"",
+    "image-tag"             : "",
+    "function-description"  : "",
+    "function-security-groups" : "sg-07bea6a6b2cbb1163"
+}

@@ -1,0 +1,17 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      dotnet: 3.1
+  pre_build:
+    commands:
+      - dotnet restore GameServer/GameServer.csproj
+  build:
+    commands:
+      - dotnet publish -c release -o ./build_output GameServer/GameServer.csproj
+  post_build:
+    commands:
+artifacts:
+  files:
+    - GameServer/bin/**/*
+    - appspec.yml

@@ -1,0 +1,1 @@
+C:\\Projects\\git\\PrototypingProjects\\BattleServer\\bin\\Debug\\BattleServer.exe

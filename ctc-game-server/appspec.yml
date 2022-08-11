@@ -1,0 +1,49 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/Web2
+hooks:
+  AfterInstall:
+    - location: /start.sh
+      timeout: 300
+      runas: root
+      
+  # - source: scripts/virtualhost.conf
+  #   destination: /home/ec2-user/aspnetcoreservice
+  # - source: scripts/kestrel-aspnetcoreservice.service
+  #   destination: /etc/systemd/system
+  # - source: /requirements.txt
+  #   destination: /home/ec2-user
+hooks:
+  # ApplicationStop:
+  #   - location: scripts/stop_service
+  #     timeout: 300
+  #     runas: root
+
+  # BeforeInstall:
+  #   - location: scripts/remove_application
+  #     timeout: 300
+  #     runas: root
+
+  AfterInstall:
+    - location: /start.sh
+      timeout: 300
+      runas: root
+
+  #   - location: scripts/codestar_remote_access
+  #     timeout: 300
+  #     runas: root
+
+  #   - location: scripts/install_httpd
+  #     timeout: 300
+  #     runas: root
+
+  #   - location: scripts/install_dotnetcore
+  #     timeout: 500
+  #     runas: root
+
+  # ApplicationStart:
+  #   - location: scripts/start_service
+  #     timeout: 300
+  #     runas: root

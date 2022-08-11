@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Configurations>Debug;Release;Publish</Configurations>
+  </PropertyGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="xcopy /Y $(SolutionDir)CommonType\CommonTypes\ %25KCLIENT_TARGET_DIR%25\Assets\Scripts\SharedFromServer\CommonType&#xD;&#xA;&#xD;&#xA;xcopy /Y $(SolutionDir)BattleProtocol\BaseProtocol.cs %25KCLIENT_TARGET_DIR%25\Assets\Scripts\SharedFromServer\BattleProtocol&#xD;&#xA;xcopy /Y $(SolutionDir)BattleProtocol\MessageType.cs %25KCLIENT_TARGET_DIR%25\Assets\Scripts\SharedFromServer\BattleProtocol&#xD;&#xA;xcopy /Y $(SolutionDir)BattleProtocol\ProtocolFactory.cs %25KCLIENT_TARGET_DIR%25\Assets\Scripts\SharedFromServer\BattleProtocol&#xD;&#xA;xcopy /Y $(SolutionDir)BattleProtocol\Entities\ %25KCLIENT_TARGET_DIR%25\Assets\Scripts\SharedFromServer\BattleProtocol\Entities&#xD;&#xA;&#xD;&#xA;xcopy /Y $(SolutionDir)CommonProtocol\CBaseProtocol.cs %25KCLIENT_TARGET_DIR%25\Assets\Scripts\SharedFromServer\CommonProtocol&#xD;&#xA;xcopy /Y $(SolutionDir)CommonProtocol\MessageType.cs %25KCLIENT_TARGET_DIR%25\Assets\Scripts\SharedFromServer\CommonProtocol&#xD;&#xA;xcopy /Y $(SolutionDir)CommonProtocol\ProtocolFactory.cs %25KCLIENT_TARGET_DIR%25\Assets\Scripts\SharedFromServer\CommonProtocol&#xD;&#xA;xcopy /Y $(SolutionDir)CommonProtocol\ResponseType.cs %25KCLIENT_TARGET_DIR%25\Assets\Scripts\SharedFromServer\CommonProtocol&#xD;&#xA;xcopy /Y $(SolutionDir)CommonProtocol\Req\ %25KCLIENT_TARGET_DIR%25\Assets\Scripts\SharedFromServer\CommonProtocol\Req&#xD;&#xA;xcopy /Y $(SolutionDir)CommonProtocol\Res\ %25KCLIENT_TARGET_DIR%25\Assets\Scripts\SharedFromServer\CommonProtocol\Res&#xD;&#xA;&#xD;&#xA;$(SolutionDir)Publish\MessagePackGenerator\tools\mpc.exe -i %25KCLIENT_TARGET_DIR%25\Assembly-CSharp.csproj -o %25KCLIENT_TARGET_DIR%25\Assets\Scripts\MessagePackGenerated.cs&#xD;&#xA;" />
+  </Target>
+
+</Project>

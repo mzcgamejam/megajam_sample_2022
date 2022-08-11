@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="IF $(ConfigurationName)==Release  (&#xD;&#xA;xcopy /Y $(SolutionDir)BattleServer\Dependency\ $(SolutionDir)BattleServer\bin\Release&#xD;&#xA;goto :end&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;xcopy /Y $(SolutionDir)BattleServer\Dependency\ $(SolutionDir)BattleServer\bin\Debug&#xD;&#xA;&#xD;&#xA;:end" />
+  </Target>
+
+</Project>
