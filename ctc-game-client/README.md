@@ -93,7 +93,7 @@ Assets\Resources\Dev\Connect.json
 
 BattleClient, Hierarchy에 있는 GameManager에서 TargetServer 지정에 따라 접근 정보 변경 됨.
 
-![/images/ctc-game-client-01.png](/images/ctc-game-client-01.png)
+![images/ctc-game-client-01.png](images/ctc-game-client-01.png)
 
 GameServer에서 DB 접근 정보
 
