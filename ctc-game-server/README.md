@@ -88,7 +88,7 @@ commit types : feat, fix, build, chore, ci, docs, style, refactor, test
 
     ex)
 
-    ![/images/ctc-game-server/ctc-game-server-01.png](/images/ctc-game-server/ctc-game-server-01.png)
+    ![images/ctc-game-server/ctc-game-server-01.png](images/ctc-game-server/ctc-game-server-01.png)
 
     공유 스크립트 복사 및 MessagePack 프로토콜 mpc를 통한 MessagePackGenerated 생성
 
